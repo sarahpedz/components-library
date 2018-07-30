@@ -1,2 +1,2 @@
 # HTML / CSS Components Library
-Library of HTML components
+Library of HTML components for an easier build process
