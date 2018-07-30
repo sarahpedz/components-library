@@ -1,2 +1,2 @@
-# html-component-library
+# HTML / CSS Components Library
 Library of HTML components
