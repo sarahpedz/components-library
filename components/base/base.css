@@ -1,0 +1,14 @@
+/*MAIN*/
+
+.main {
+  padding: 50px 0;
+}
+
+.icon:after {  
+  content: "\f105";
+  font-family:"Font Awesome 5 Free"; /* Font Awesome only works on puesdo elements */
+  font-size: 25px;
+  color: #000;
+  display: inline-block;
+  font-weight: 900; /* Required */
+}
