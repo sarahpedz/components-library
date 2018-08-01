@@ -2,5 +2,6 @@
 Library of HTML components for an easier build process.
 - Base
 - Navigation
+- Content
 - Map
 - Footer
