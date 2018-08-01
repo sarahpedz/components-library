@@ -1,0 +1,47 @@
+.contents-block {
+  position: relative;
+  padding: 60px 0;
+}
+
+.contents-block .col-fill-left {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+  .contents-block .col-fill-container {
+    position: relative;
+    z-index: 2;
+  }
+
+.contents-block .col-fill-right {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .contents-block {
+    padding: 0 0 40px 0;
+  }
+
+  .contents-block .col-fill-left, .contents-block .col-fill-right {
+    width: 100%;
+    position: relative;
+    height: 300px;
+    margin-bottom: 40px;
+  }
+
+}

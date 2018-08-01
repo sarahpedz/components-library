@@ -11,6 +11,26 @@
     padding: 0;
   }
 
+  .social-media {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+    .social-media li {
+      display: inline-block;
+      padding: 0 10px;
+      font-size: 25px;
+    }
+
+    .social-media li a {
+      color: #000;
+    }
+
+    .social-media li a:hover {
+      color: #666;
+    }
+
 .copyright {
   background-color: #666;
   color: #fff;
