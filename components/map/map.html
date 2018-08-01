@@ -15,28 +15,50 @@
     <link rel="stylesheet" href="maps.css">
 
     <!-- Bing Map Script - Useful code examples found at https://bingmapsv8samples.azurewebsites.net/ -->
-    <script type='text/javascript'>
-    var map;
-    function GetMap()
-    {
-        map = new Microsoft.Maps.Map('#myMap', {            
-            mapTypeId: Microsoft.Maps.MapTypeId.grayscale,
-            disableScrollWheelZoom: true,
-            showMapTypeSelector:false
-        });
+      <script type='text/javascript'>
+      var map;
 
-        //Create custom Pushpin using an SVG string.
-        pin = new Microsoft.Maps.Pushpin(map.getCenter(), {
-            icon: '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><circle cx="15" cy="15" r="13" stroke="black" stroke-width="2" fill="{color}"/><text x="15" y="20" text-anchor="middle">{text}</text></svg>',
-            color: 'yellow',
-            text: '1',
-            anchor: new Microsoft.Maps.Point(20, 20)
-        });
+      var myStyle = {
+          "elements": {
+              "water": { "fillColor": "#abd0fa" },
+              "waterPoint": { "iconColor": "#abd0fa" },
+              "road": { "fillColor": "#efeada" },
+              "railway": { "strokeColor": "#c9c2ab" },
+              "controlledAccessHighway": { "labelOutlineColor": "transparent", "strokeColor": "#ee9bad" },
+              "highway": { "strokeColor": "#ee9bad" },
+              "structure": { "fillColor": "#ffffff" },
+              "runway": { "fillColor": "#c9c2ab" },
+              "area": { "fillColor": "#aee9c6" },
+              "point": { "iconColor": "#ffffff", "fillColor": "#c9c2ab", "strokeColor": "#c9c2ab" },
+              "transit": { "fillColor": "#c9c2ab" }
+          },
+          "version": "1.0" 
+      };
 
-        //Add the pushpin to the map.
-        map.entities.push(pin);
-    }
-    </script>
+      
+
+      function GetMap()
+      {
+          map = new Microsoft.Maps.Map('#myMap', {         
+              disableScrollWheelZoom: true,
+              showMapTypeSelector:false,
+              zoom: 13,
+              customMapStyle: myStyle,
+              center: new Microsoft.Maps.Location(47.6149, -122.1941)
+          });
+
+          var center = map.getCenter();
+
+          var pin = new Microsoft.Maps.Pushpin(center, {
+              icon: 'http://via.placeholder.com/350x150',
+              anchor: new Microsoft.Maps.Point(10, 40)
+          });
+
+          map.entities.push(pin);
+      }
+
+      
+      </script>
     <!-- Create a Bing Map Key at https://www.bingmapsportal.com -->
     <script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=[API-KEY]" async defer></script>
 
